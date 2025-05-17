@@ -24,3 +24,32 @@ body {
 	color: var(--foreground);
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.anim-wrapper > .anim {
+	animation: out .2s;
+	animation-fill-mode: forwards;
+}
+
+.anim-wrapper:hover > .anim {
+	animation: in .2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes in {
+    0% {
+		transform: scale(1);
+	}
+    100% {
+		transform: scale(1.2);
+	} 
+}
+
+@keyframes out {
+    0% {
+		transform: scale(1.2);
+	}
+    100% {
+		transform: scale(1);
+	} 
+}
